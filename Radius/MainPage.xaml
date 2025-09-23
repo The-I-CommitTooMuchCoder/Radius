@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Radius.MainPage"
+             BackgroundColor="#FF9800">
+    
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Start" Margin="25">
+            <Label
+                Text="Circle Calculator"
+                Padding="10"
+                Margin="0,10,0,15"
+                TextColor="Black"
+                FontSize="30"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"></Label>
+
+            <StackLayout Padding="30" VerticalOptions="Start" HeightRequest="400">
+                <Label
+                    Text="Illustration"
+                    Padding="10"
+                    TextColor="Black"
+                    FontSize="15"
+                    HorizontalTextAlignment="Start"></Label>
+
+                <Frame
+                    x:Name="CircleFrame"
+                    CornerRadius="100"
+                    Padding="0"
+                    IsClippedToBounds="True"
+                    HeightRequest="200"
+                    WidthRequest="200">
+                        <Image Source="dragon_ball.svg.png"
+                           Aspect="AspectFit"></Image>
+                </Frame>
+
+            </StackLayout>
+
+
+            <Label Text="Radius:"
+                   TextColor="Black"></Label>
+
+            <Entry
+                x:Name="RadiusEntry"
+                Placeholder="Input a number between 1-100"
+                PlaceholderColor="LightGrey"
+                BackgroundColor="Snow" />
+
+            <Slider
+                x:Name="RadiusSlider"
+                Minimum="1"
+                Maximum="100"
+                MinimumTrackColor="#7FF9FF"
+                ThumbImageSource="energy.png" />
+
+            <Label Text="Percentage(%)"
+                   TextColor="Black"></Label>
+
+            <HorizontalStackLayout Spacing="40">
+                <Button Text="25" Clicked="OnPresetClicked" />
+                <Button Text="50" Clicked="OnPresetClicked" />
+                <Button Text="75" Clicked="OnPresetClicked" />
+                <Button Text="100" Clicked="OnPresetClicked" />
+            </HorizontalStackLayout>
+
+            <StackLayout BackgroundColor="CornflowerBlue" Padding="25">
+                <Label
+                    x:Name="CircumferenceLabel"
+                    Text="Circumference:"
+                    TextColor="Black" />
+
+                <Label
+                    x:Name="AreaLabel"
+                    Text="Area:"
+                    TextColor="Black" />
+
+                <Label
+                    x:Name="VolumeLabel"
+                    Text="Volume:"
+                    TextColor="Black" />
+
+            </StackLayout>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>
